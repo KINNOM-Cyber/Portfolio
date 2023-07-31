@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="">
+    <meta name="copyright" content="Nuttaphan Artsumang">
+    <meta name="designer" content="by kinnomnailift">
+    <meta property="og:image"
+        content="https://yt3.googleusercontent.com/Z-1e7dihZL0yxcA_NHdNF9e3yaG-w2IxQYyDstZEmVz5qGHVaKSuXLG_l37Qfq-iq8gILfdIzhQ=s900-c-k-c0x00ffffff-no-rj">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Earth - Nuttaphan</title>
+    <style data-type="loading__indicator">
+        .loader {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: relative;
+            animation: rotate 1s linear infinite
+        }
+
+        .loader::before {
+            content: "";
+            box-sizing: border-box;
+            position: absolute;
+            inset: 0px;
+            border-radius: 50%;
+            border: 2px solid #FFF;
+            animation: prixClipFix 2s linear infinite;
+        }
+
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes prixClipFix {
+            0% {
+                clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
+            }
+
+            25% {
+                clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
+            }
+
+            50% {
+                clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+            }
+
+            75% {
+                clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)
+            }
+
+            100% {
+                clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/" class="nav-item active">Showcase</a></li>
+                <li><a href="/about-me" class="nav-item">About Me</a></li>
+                <li><a href="mailto:gettogamer95@gmail.com" class="nav-item">Contact</a></li>
+            </ul>
+            <h1>Portfolio</h1>
+            <ul>
+                <li>
+                    <button id="facebook" class="nav__btn fa-brands fa-facebook-f"
+                        value="https://www.facebook.com/profile.php?id=100069515031789"></button>
+                </li>
+                <li>
+                    <button id="instgram" class="nav__btn fa-brands fa-instagram"
+                        value="https://www.instagram.com/ee__xrth/"></button>
+                </li>
+                <li>
+                    <button class="nav__btn menu__btn"><i class="fa-brands fa-youtube"></i></button>
+                    <div class="menu">
+                        <div class="menu__item">
+                            <a href="https://youtube.com/@7days685" target="_blank"
+                                rel="noopener noreferrer">@7days685</a>
+                        </div>
+                        <div class="menu__item">
+                            <a href="https://youtube.com/@earth_ntp9375" target="_blank"
+                                rel="noopener noreferrer">@earth_ntp937</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="showcase">
+        <div class="showcase__items">
+            <% categorys.map((d)=> { %>
+                <div class="pill">
+                    <input name="category" type="radio" title="<%=d.title%>" value="<%=d.id%>" id="<%=d.title%>-radio-input">
+                    <label for="<%=d.title%>-radio-input">
+                        <%=d.title%>
+                    </label>
+                </div>
+                <% })%>
+        </div>
+        <div class="showcase__body">
+            <div class="row">
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="main.min.js"></script>
+</body>
+
+</html>
